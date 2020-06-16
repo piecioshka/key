@@ -3,15 +3,20 @@ function display($where, text) {
 }
 
 function parse(evt) {
+  console.log(evt);
   return `
-    * Crucial props:
+    * Modifiers props:
 
     altKey:     ${evt.altKey}
     ctrlKey:    ${evt.ctrlKey}
-    key:        ${evt.key}
     metaKey:    ${evt.metaKey}
-    repeat:     ${evt.repeat}
     shiftKey:   ${evt.shiftKey}
+
+    * Crucial props:
+
+    code:       ${evt.code}
+    key:        ${evt.key}
+    repeat:     ${evt.repeat}
     type:       ${evt.type}
     which:      ${evt.which}
 
