@@ -1,6 +1,6 @@
 # key
 
-🛠 A simple tool that displays the current `keydown` event details.
+🛠 A simple tool that displays the current keyboard event details.
 
 ## Demo 🚀
 
@@ -8,7 +8,8 @@
 
 ## Features
 
-* :white_check_mark: Display crucial details about `keydown` event
+* :white_check_mark: Display crucial details about keyboard event
+* :white_check_mark: Switch events: `keydown`, `keyup`, `keypress`
 * :white_check_mark: Display deprecated props in special section
 * :white_check_mark: Lightweight (without CSS)
 * :white_check_mark: Cross-browser (works on any browser)

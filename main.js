@@ -1,4 +1,4 @@
-function display($where, text) {
+function display($where, text = "Press any key...") {
   $where.textContent = text;
 }
 
@@ -30,9 +30,24 @@ function parse(evt) {
 
 function main() {
   const $pre = document.querySelector("pre");
+  const $eventType = document.querySelector("select");
+  const $reset = document.querySelector("button");
+  let prevEventType = $eventType.value;
+  const reset = () => display($pre);
   const handler = (evt) => display($pre, parse(evt));
-  document.addEventListener("keydown", handler);
-  // document.addEventListener("keyup", handler);
+
+  $eventType.addEventListener("change", () => {
+    document.removeEventListener(prevEventType, handler);
+    document.addEventListener($eventType.value, handler);
+    prevEventType = $eventType.value;
+    reset();
+  });
+
+  $reset.addEventListener("click", reset);
+
+  // Go go go!!!1
+  document.addEventListener($eventType.value, handler);
+  reset();
 }
 
 main();
