@@ -2,7 +2,7 @@
 
 🛠 A simple tool that displays the current keyboard event details.
 
-## Demo 🚀
+## Preview 🎉
 
 <https://piecioshka.github.io/key/>
 
